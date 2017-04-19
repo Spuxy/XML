@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kadernictvi>
+<nastaveni-kadernictvi>    
+    <featury cloud="enable">
+        <koment>Enable</koment>
+        <helpdesk>1</helpdesk>
+        <hodnoceni_kaderniku>1</hodnoceni_kaderniku>
+        <vyhledavani>1</vyhledavani>
+        <poloha>1</poloha>
+    </featury>   
+    <kontakt-admin>boye-kofi@kadernictvi.cz</kontakt-admin>    
+    <grafika>
+        <bg-color imgsrc="nuzky.gif" alt="kadernictvi">Červená</bg-color>
+        <font bold="enable">Times New Roman</font>
+        <font-color>Hnědá</font-color>
+        <font-size>16</font-size>
+    </grafika>
+    <soc-sit>
+        <twitter>wwww.twitter.com/kadernictvi</twitter>
+        <facebook>wwww.facebook.com/kadernictvi</facebook>
+        <instagram>Kadernictvi App</instagram>
+        <tumblr>Kadernictvi App</tumblr>        
+    </soc-sit>
+    <jazyk>CZ</jazyk>
+    <framework>
+        <uprava_vzhledu>1</uprava_vzhledu>
+        <formatovani>1</formatovani>
+        <autocorrect>1</autocorrect>
+    </framework>
+</nastaveni-kadernictvi>
+
+    <zakaznici>
+            <zakaznik identifikace="1">
+                <jmeno length="20">Tomáš</jmeno>
+                <prijmeni length="20">Modrý</prijmeni>
+                <pohlavi type="radio">Muž</pohlavi>
+                <vek>12</vek>
+                <barva_vlasu>Blond</barva_vlasu>
+                <delka_vlasu>5</delka_vlasu>
+                <styl_vlasu>Kohout</styl_vlasu>
+                <obj>St-15:30</obj>
+                <prihlas-jmeno>host</prihlas-jmeno>          
+                <prihlas-heslo strongpassword="enable" type="password">agSghG86</prihlas-heslo>
+            </zakaznik>
+            <zakaznik identifikace="2">
+                <jmeno length="20">Filip</jmeno>
+                <prijmeni length="20">Joshua</prijmeni>
+                <pohlavi type="radio">Muž</pohlavi>
+                <vek>21</vek>
+                <barva_vlasu>Černá</barva_vlasu>
+                <delka_vlasu>12</delka_vlasu>
+                <styl_vlasu>Afro</styl_vlasu>
+                <obj>St-15:30</obj>
+                <prihlas-jmeno>filip123</prihlas-jmeno>
+                <prihlas-heslo strongpassword="enable" type="password">kraAl098</prihlas-heslo>
+            </zakaznik>
+            <zakaznik identifikace="3">
+                <jmeno length="20">Veronika</jmeno>
+                <prijmeni length="20">Skoupá</prijmeni>
+                <pohlavi type="radio">Žena</pohlavi>
+                <vek>20</vek>
+                <barva_vlasu>Blond</barva_vlasu>
+                <delka_vlasu>25</delka_vlasu>
+                <styl_vlasu>Mikado</styl_vlasu>
+                <obj>Čt-15:30</obj>
+                <prihlas-jmeno>verca123</prihlas-jmeno>
+                <prihlas-heslo strongpassword="enable" type="password">verousenka</prihlas-heslo>
+            </zakaznik>
+            <zakaznik identifikace="4">
+                <jmeno length="20">Honza</jmeno>
+                <prijmeni length="20">Novák</prijmeni>
+                <pohlavi type="radio">Muž</pohlavi>
+                <vek>20</vek>
+                <barva_vlasu>Blond</barva_vlasu>
+                <delka_vlasu>2</delka_vlasu>
+                <styl_vlasu>Emo</styl_vlasu>
+                <obj>St-9:30</obj>
+                <prihlas-jmeno>honzik123</prihlas-jmeno>
+                <prihlas-heslo strongpassword="enable" type="password">spart123</prihlas-heslo>
+            </zakaznik>
+            <zakaznik identifikace="5">
+                <jmeno length="20">Dominik</jmeno>
+                <prijmeni length="20">Svoboda</prijmeni>
+                <pohlavi type="radio">Muž</pohlavi>
+                <vek>52</vek>
+                <barva_vlasu>Zrzavé</barva_vlasu>
+                <delka_vlasu>12</delka_vlasu>
+                <styl_vlasu>Emo</styl_vlasu>
+                <obj>Út-15:30</obj>
+                <prihlas-jmeno>emousek123</prihlas-jmeno>
+                <prihlas-heslo strongpassword="enable" type="password">emoH123</prihlas-heslo>
+            </zakaznik>
+    </zakaznici>
+
+    <kadernici>
+        <kadernik misto="Praha">
+            <kadernik_jm>Filip</kadernik_jm>
+            <kadernik_pr>Boye-Kofi</kadernik_pr>
+            <pohlavi_k>Muž</pohlavi_k>
+            <vek_k>25</vek_k>
+            <hodnoceni_k>5</hodnoceni_k>
+            <salon>Salon Anděl</salon>
+            <zakaznik identifikace="1">Tomáš</zakaznik>
+            <strih_poh>Mužske</strih_poh>
+            <dny>Po-Pa</dny>
+            <od>9:00</od>
+            <do>17:30</do>
+            <os_roz>St-12:30</os_roz>
+        </kadernik>
+        <kadernik misto="Brno">
+            <kadernik_jm>Honza</kadernik_jm>
+            <kadernik_pr>Velechovský</kadernik_pr>
+            <pohlavi_k>Muž</pohlavi_k>
+            <vek_k>26</vek_k>
+            <hodnoceni_k>5</hodnoceni_k>
+            <salon>Salon Krásy</salon>
+            <zakaznik identifikace="2">Filip</zakaznik>
+            <strih_poh>Mužske</strih_poh>
+            <dny>Po-Pa</dny>
+            <od>9:00</od>
+            <do>17:30</do>
+            <os_roz>St-12:30</os_roz>
+        </kadernik>  
+        <kadernik misto="Rudna_u_Prahy">
+            <kadernik_jm>Tomáš</kadernik_jm>
+            <kadernik_pr>Skoupý</kadernik_pr>
+            <pohlavi_k>Muž</pohlavi_k>
+            <vek_k>28</vek_k>
+            <hodnoceni_k>2</hodnoceni_k>
+            <salon>Salon Mužů</salon>
+            <zakaznik identifikace="3">Veronika</zakaznik>
+            <strih_poh>Mužske</strih_poh>
+            <dny>Po-Pa</dny>
+            <od>9:00</od>
+            <do>17:30</do>
+            <os_roz>Út-12:30</os_roz>
+        </kadernik>    
+        <kadernik misto="Tachlovice">
+            <kadernik_jm>Dominik</kadernik_jm>
+            <kadernik_pr>Holub</kadernik_pr>
+            <pohlavi_k>Muž</pohlavi_k>
+            <vek_k>25</vek_k>
+            <hodnoceni_k>3</hodnoceni_k>
+            <salon>Salon Žen</salon>
+            <zakaznik identifikace="4">Honza</zakaznik>
+            <strih_poh>Mužske</strih_poh>
+            <dny>Po-Pa</dny>
+            <od>9:00</od>
+            <do>17:30</do>
+            <os_roz>Pa-12:30</os_roz>
+        </kadernik>    
+        <kadernik misto="Jinocany">
+            <kadernik_jm>Patrik</kadernik_jm>
+            <kadernik_pr>Hrozný</kadernik_pr>
+            <pohlavi_k>Muž</pohlavi_k>
+            <vek_k>25</vek_k>
+            <hodnoceni_k>4</hodnoceni_k>
+            <salon>Salon Afroditi</salon>
+            <zakaznik identifikace="5">Dominik</zakaznik>
+            <strih_poh>Mužske</strih_poh>
+            <dny>Po-Pa</dny>
+            <od>9:00</od>
+            <do>17:30</do>
+            <os_roz>Po-12:30</os_roz>
+        </kadernik>      
+    </kadernici>
+</kadernictvi>

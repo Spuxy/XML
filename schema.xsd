@@ -1,0 +1,239 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="kadernictvi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nastaveni-kadernictvi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="featury">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="enableordisable" name="koment"/>
+                    <xs:element type="enableordisable" name="helpdesk"/>
+                    <xs:element type="enableordisable" name="hodnoceni_kaderniku"/>
+                    <xs:element type="enableordisable" name="vyhledavani"/>
+                    <xs:element type="enableordisable" name="poloha"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="cloud"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="kontakt-admin"/>
+              <xs:element name="grafika">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="bg-color">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="barva">
+                            <xs:attribute type="xs:string" name="imgsrc"/>
+                            <xs:attribute type="xs:string" name="alt"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="font">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="fontstyl">
+                            <xs:attribute type="xs:string" name="bold"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="barva" name="font-color"/>
+                    <xs:element type="fontvelikost" name="font-size"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="soc-sit">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:anyURI" name="twitter"/>
+                    <xs:element type="xs:anyURI" name="facebook"/>
+                    <xs:element type="xs:anyURI" name="instagram"/>
+                    <xs:element type="xs:anyURI" name="tumblr"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="jazyky" name="jazyk"/>
+              <xs:element name="framework">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="enableordisable" name="uprava_vzhledu"/>
+                    <xs:element type="enableordisable" name="formatovani"/>
+                    <xs:element type="enableordisable" name="autocorrect"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="zakaznici">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="zakaznik" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="jmeno">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:byte" name="length" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="prijmeni">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:byte" name="length" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="pohlavi">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="poh">
+                            <xs:attribute type="xs:string" name="type" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="vek_" name="vek"/>
+                    <xs:element type="barva" name="barva_vlasu"/>
+                    <xs:element type="velikost" name="delka_vlasu"/>
+                    <xs:element type="styl_" name="styl_vlasu"/>
+                    <xs:element type="cas" name="obj"/>
+                    <xs:element type="xs:string" name="prihlas-jmeno"/>
+                    <xs:element name="prihlas-heslo">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="heslo">
+                            <xs:attribute type="xs:string" name="strongpassword" use="optional"/>
+                            <xs:attribute type="xs:string" name="type" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="identifikace" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="kadernici">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="kadernik" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="kadernik_jm"/>
+                    <xs:element type="xs:string" name="kadernik_pr"/>
+                    <xs:element type="poh" name="pohlavi_k"/>
+                    <xs:element type="vek_" name="vek_k"/>
+                    <xs:element type="hodnoceni" name="hodnoceni_k"/>
+                    <xs:element type="xs:string" name="salon"/>
+                    <xs:element name="zakaznik">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:byte" name="identifikace" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="poh" name="strih_poh"/>
+                    <xs:element type="xs:string" name="dny"/>
+                    <xs:element type="cas" name="od"/>
+                    <xs:element type="cas" name="do"/>
+                    <xs:element type="cas" name="os_roz"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="misto" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!-- Nastavení omezení -->
+  <xs:simpleType name="enableordisable"> 
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Enable"/>
+      <xs:enumeration value="Disable"/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="fontvelikost">
+    <xs:restriction base="xs:integer">
+      <xs:enumeration value="6"/>
+      <xs:enumeration value="8"/>
+      <xs:enumeration value="10"/>
+      <xs:enumeration value="12"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="barva">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Modrá"/>
+      <xs:enumeration value="Hnědá"/>
+      <xs:enumeration value="Zelená"/>
+    </xs:restriction>
+  </xs:simpleType>
+   <xs:simpleType name="poh">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Muž"/>
+      <xs:enumeration value="Žena"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="fontstyl">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Times New Roman"/>
+      <xs:enumeration value="Commics"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="styl_">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Emo"/>
+      <xs:enumeration value="Pankáč"/>
+      <xs:enumeration value="Mikádo"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="cas">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="100"/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="hodnoceni">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="5"/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="jazyky">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RU"/>
+      <xs:enumeration value="CZ"/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="vek_">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="8"/>
+      <xs:maxInclusive value="100"/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="velikost">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="50"/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="heslo">
+    <xs:restriction base="xs:string">
+       <xs:pattern value="[a-zA-Z0-9]{8}"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
