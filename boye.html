@@ -1,0 +1,379 @@
+        <!DOCTYPE html> 
+        <html>
+          <head>
+          
+          <meta http-equiv="content-type" content="text/html; charset=utf-8">
+          <meta name="Author" content="Eduard Linhart">
+          <title>Boye-Kofi</title>     
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          </head>
+          <body>
+            <div class="container">
+            <nav>
+              <h3>Navigace:</h3>
+              <ul>
+                <li><a href="#uvod">Úvod</a></li>
+                <li><a href="#metodika">Metodika</a></li>
+                <li><a href="#popis">Popis elementů a atributů</a></li>
+                <li><a href="#transf">Popis transformace</a></li>
+                <li><a href="#zaver">Závěr</a></li>
+              </ul>
+              <hr />
+            </nav>
+            <main>
+              <section id="uvod">
+                <article>
+                  <header>
+                    <h2>Úvod</h2>
+                  </header>          
+                  <p>
+                  Jako téma semestrálního projektu jsem si vybral aplikaci pro kadeřnictví.
+                  Toto téma jsem si zvolil protože mám i jako bakalářskou praci na mobilní aplikaci.
+                  </p>
+                  <p>XML soubor slouží k obecné konfiguraci webové aplikace,uživatelů a práv.</p> 
+                </article>
+              </section>
+              <section id="metodika">
+                <article>
+                  <header>
+                    <h2>Metodika</h2>
+                  </header>
+                  <h3>Využité programy</h3>
+                  <p>
+                      Pro tvorbu tohoto projektu jsem použil programy <a href="https://www.sublimetext.com/">Sublime Text</a>, NetBeans.    
+                  </p>
+                  <h3>Využité webové stránky</h3>
+                  <p>
+                     W3Schools, validaci jsem využil neoficální validátory
+                  </p>        
+                </article>
+              </section>
+              <section id="popis" >
+                <article>
+                  <header>
+                    <h2>Popis elementů a atributů</h2>
+                  </header>
+                  <h3>Použité elementy</h3>
+                  <table border="1" id="elementy" title="Tabulka elementů">
+                    <tr>
+                      <td>Název elementu</td>
+                      <td>Popis elementu</td>
+                      <td>Schématické omezení</td>
+                    </tr>
+                    <tr>                       
+                      <td>Zákazníci</td>
+                      <td>root pro zákazníky</td>
+                      <td>Bez omezení</td>
+                    </tr>
+                    <tr>                       
+                      <td>Zákazník</td>
+                      <td>element pro osobu který je zákazník</td>
+                      <td>string</td>
+                    </tr> 
+                    <tr>                       
+                      <td>Jmémo</td>
+                      <td>Jméno zákazníka</td>
+                      <td>string</td>
+                    </tr>
+                    <tr>                       
+                      <td>Příjmení</td>
+                      <td>Příjmení zákazníka</td>
+                      <td>string</td>
+                    </tr>
+                    <tr>                       
+                      <td>Kadernictvi</td>
+                      <td>Název aplikace</td>
+                      <td>název app</td>
+                    </tr>
+                    <tr>                       
+                      <td>nastaveni-kadernictvi</td>
+                      <td>Obsahuje obecné nasstavení kadeřnictví</td>
+                      <td>Bez omezení</td>
+                    </tr>
+                    <tr>                       
+                      <td>featury</td>
+                      <td>pluginy aplikace</td>
+                      <td>bez omezení</td>
+                    </tr>
+                    <tr>                       
+                      <td>koment</td>
+                      <td>Určuje zda v aplikaci bude povolen modul komentování</td>
+                      <td>1/0</td>
+                    </tr>
+                    <tr>                       
+                      <td>helpdesk</td>
+                      <td>Určuje zda v aplikaci bude povolen modul pro podporu online podpory</td>
+                      <td>1/0</td>
+                    </tr>
+                    <tr>                       
+                      <td>hodnoceni_kaderniku</td>
+                      <td>Určuje zda v aplikaci bude povolen modul pro umožnění hodnocení jednotlivých kadeřníků</td>
+                      <td>1/0</td>
+                    </tr> 
+                    <tr>                       
+                      <td>vyhledávání</td>
+                      <td>Určuje zda se bude moc hledat</td>
+                      <td>http, https</td>
+                    </tr>
+                    <tr>                       
+                      <td>poloha</td>
+                      <td>Určuje polohu uživatele</td>
+                      <td>integer</td>
+                    </tr>
+                    <tr>                       
+                      <td>kontakt-admin</td>
+                      <td>Slouží k nastavení emailu správce aplikace</td>
+                      <td>korektní email</td>
+                    </tr>
+                    <tr>                       
+                      <td>grafika</td>
+                      <td>obsahuje veškeré grafické prvky</td>
+                      <td>Bez omezení</td>
+                    </tr>
+                    <tr>                       
+                      <td>bg-color</td>
+                      <td>background color z možných barev, které jsou na pozadí</td>
+                      <td>string</td>
+                    </tr>
+                    <tr>                       
+                      <td>font</td>
+                      <td>Určuje styl fontu</td>
+                      <td>string</td>
+                    </tr>
+                    <tr>                       
+                      <td>font-color</td>
+                      <td>Určuje barvu fontu</td>
+                      <td>string</td>
+                    </tr>
+                    <tr>                       
+                      <td>font-size</td>
+                      <td>Určuje velikost fontu</td>
+                      <td>integer</td>
+                    </tr>
+                    <tr>                       
+                      <td>soc-sit</td>
+                      <td>Určuje jaké sociální sítě bude obsahovat</td>
+                      <td>1/0</td>
+                    </tr>
+                    <tr>                       
+                      <td>twitter</td>
+                      <td>oodkazuje na sociální síť</td>
+                      <td>url</td>
+                    </tr>
+                    <tr>                       
+                      <td>facebook</td>
+                      <td>oodkazuje na sociální síť</td>
+                      <td>url</td>
+                    </tr>
+                    <tr>                       
+                      <td>instagram</td>
+                      <td>oodkazuje na sociální síť</td>
+                      <td>url</td>
+                    </tr>
+                    <tr>                       
+                      <td>tumblr</td>
+                      <td>odkazuje na sociální síť</td>
+                      <td>1/0</td>
+                    </tr>
+                    <tr>                       
+                      <td>jazyk</td>
+                      <td>Určuje v jakém jazyce se bude aplikace zobrazovat</td>
+                      <td>string</td>
+                    </tr>
+                    <tr>                       
+                      <td>framework</td>
+                      <td>pomocné programy</td>
+                      <td>1/0</td>
+                    </tr>
+                    <tr>                       
+                      <td>uprava_vzhledu</td>
+                      <td>upravuje aby aplikace dostala "kabát"</td>
+                      <td>1/0</td>
+                    </tr>
+                    <tr>                       
+                      <td>formatovani</td>
+                      <td>formatuje kod</td>
+                      <td>1/0</td>
+                    </tr>
+                    <tr>                       
+                      <td>autocorrect</td>
+                      <td>framework pro automatické opravení chyb</td>
+                      <td>1/0</td>
+                    </tr>
+                    <tr>                       
+                      <td>pohlavi</td>
+                      <td>Určuje pohlaví uživatele</td>
+                      <td>String</td>
+                    </tr>
+                    <tr>                       
+                      <td>vek</td>
+                      <td>Určuje věk uživatele</td>
+                      <td>integer</td>
+                    </tr>
+                    <tr>                       
+                      <td>barva_vlasu</td>
+                      <td>Určuje barvu vlasů uživatele</td>
+                      <td>String</td>
+                    </tr>
+                    <tr>                       
+                      <td>delka_vlasu</td>
+                      <td>Určuje délku vlasů uživatele</td>
+                      <td>integer</td>
+                    </tr>
+                    <tr>                       
+                      <td>styl_vlasu</td>
+                      <td>Určuje styl vlasů uživatele</td>
+                      <td>integer</td>
+                    </tr>
+                    <tr>                       
+                      <td>obj</td>
+                      <td>Určuje objednání se u kadeřníka uživatele</td>
+                      <td>integer a string</td>
+                    </tr>
+                    <tr>                       
+                      <td>prihlas-jmeno</td>
+                      <td>Určuje přihlašovací jméno uživatele</td>
+                      <td>string</td>
+                    </tr>
+                    <tr>                       
+                      <td>prihlas-heslo</td>
+                      <td>Určuje přihlašovací heslo uživatele</td>
+                      <td>složité heslo</td>
+                    </tr>
+                    <tr>                       
+                      <td>kadernici</td>
+                      <td>root pro kadeřníky</td>
+                      <td>žádné</td>
+                    </tr>
+                    <tr>                       
+                      <td>kadernik_jm</td>
+                      <td>Určuje jméno kadeřníka</td>
+                      <td>string</td>
+                    </tr>
+                    <tr>                       
+                      <td>kadernik_pr</td>
+                      <td>Určuje příjmení kadeřníka</td>
+                      <td>string</td>
+                    </tr>
+                    <tr>                       
+                      <td>pohlav_k</td>
+                      <td>Určuje pohlaví kadeřníka</td>
+                      <td>string</td>
+                    </tr>
+                    <tr>                       
+                      <td>vek_k</td>
+                      <td>Určuje věk kadeřníka</td>
+                      <td>integer</td>
+                    </tr>
+                    <tr>                       
+                      <td>hodnoceni_k</td>
+                      <td>Určuje hodnocení kadeřníka</td>
+                      <td>integer<td>
+                    </tr>
+                    <tr>                       
+                      <td>salon</td>
+                      <td>Určuje kde kadeřník pracuje</td>
+                      <td>string</td>
+                    </tr>
+                    <tr>                       
+                      <td>zakaznik</td>
+                      <td>Určuje zákazníka kadřníka</td>
+                      <td>string</td>
+                    </tr>
+                    <tr>                       
+                      <td>strih_poh</td>
+                      <td>Určuje jaké pohlaví stříhá</td>
+                      <td>string</td>
+                    </tr>
+                    <tr>                       
+                      <td>dny</td>
+                      <td>Určuje dny salonu, kdy se může objednat</td>
+                      <td>string</td>
+                    </tr>
+                    <tr>                       
+                      <td>od</td>
+                      <td>Určuje od kdy je otevřeno</td>
+                      <td>integer</td>
+                    </tr>
+                    <tr>                       
+                      <td>do</td>
+                      <td>Určuje do kdy je otevřeno</td>
+                      <td>integer</td>
+                    </tr>
+                    <tr>                       
+                      <td>os_roz</td>
+                      <td>Určuje osobní rozvrh kadeřníka</td>
+                      <td>integer</td>
+                    </tr>
+                  </table>
+                  <h3>Použité atributy</h3>
+                  <table border="1" id="atributy" title="Tabulka atributů">
+                    <tr>
+                      <td>Název atributu</td>
+                      <td>Popis atributu</td>
+                    </tr>
+                    <tr>                       
+                      <td>identifikace</td>
+                      <td>Určuje identifikace zákazníka</td>
+                    </tr>
+                    <tr>                       
+                      <td>strongpassword</td>
+                      <td>Určuje silné heslo</td>
+                    </tr>
+                    <tr>                       
+                      <td>type</td>
+                      <td>Určuje vybrání si ze 2 možností</td>
+                    </tr>
+                     <tr>                       
+                      <td>length</td>
+                      <td>délka jména/příjmení</td>
+                    </tr> 
+                     <tr>                       
+                      <td>imgsrc</td>
+                      <td>Určuje zdroj obrázku</td>
+                    </tr> 
+                     <tr>                       
+                      <td>alt</td>
+                      <td>Určuje popis obrázku</td>
+                    </tr> 
+                     <tr>                       
+                      <td>bold</td>
+                      <td>Určuje tučné zvýraznění</td>
+                    </tr> 
+                     <tr>                       
+                      <td>cloud</td>
+                      <td>Určuje zapnutí zálohy na cloud</td>
+                    </tr>
+                        <tr>                       
+                      <td>misto</td>
+                      <td>místo salonu</td>
+                    </tr> 
+                  </table>
+                </article>
+              </section>
+              <section id="transf">
+                <article>
+                  <header>
+                    <h2>Popis transformace</h2>
+                  </header>
+                  <p>Transformace pomocí cyklu <code>for-each</code> vybere, odešle informace o všech uživatelích,  kteří mají hodnocení vetší nebo rovno 3 a věku 25 nebo 28</p>
+                </article>
+              </section>
+              <section id="zaver">
+                <article>
+                  <header>
+                    <h2>Závěr</h2>
+                  </header>
+                  <p>Při tvorbě této práce jsem si osahal jazyk XML, který v budoucnu určitě využiji. Myslim si že v budoucnu se s tím potkám jelikož i teď na pohovorech se mě ptají zda to znám. Jelikož chci dělat webové stránky tak tohle se mi určitě hodí.
+                  </p>
+                </article>
+              </section>
+            </main>
+            <footer>
+            <p>Autor: <strong>Boye-Kofi Filip</strong> | Česká Zemědělská univerzita Praha, dne 30.4.2017</p>
+            </footer>
+            </div>
+          </body>
+        </html>
